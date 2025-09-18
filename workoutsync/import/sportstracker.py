@@ -1,7 +1,7 @@
 import logging
 import redis
-from sportstracker import SportsTrackerApi, SportsTrackerError
-from workoutsync.utils import Cache
+from ..services.sportstracker import SportsTrackerApi, SportsTrackerError
+from ..utils import Cache
 
 
 def main():

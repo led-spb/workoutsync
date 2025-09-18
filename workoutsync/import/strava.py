@@ -3,8 +3,8 @@ import glob
 import logging
 import json
 import redis
-from strava import StravaApi
-from workoutsync.utils import Cache
+from ..services.strava import StravaApi
+from ..utils import Cache
 
 
 def main():
