@@ -6,4 +6,5 @@ ADD ./requirements.txt /app/
 ADD ./workoutsync /app/workoutsync
 RUN pip --no-cache-dir install -r requirements.txt
 
+ENTRYPOINT ["python", "-m"]
 CMD []
