@@ -1,4 +1,6 @@
 .workouts/
-.workout-sync
 *.pyc
 .idea/
+.token
+__pycache__
+venv

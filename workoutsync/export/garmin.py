@@ -36,8 +36,8 @@ def main():
 
         logging.info(f"{activity_id}: {activity['startTimeLocal']} - {activity['activityName']}")
         try:
-            gpx_data = api.download_activity(activity_id, dl_fmt=api.ActivityDownloadFormat.GPX)
-            filename = os.path.join(args.storage, f"{str(activity_id)}.gpx")
+            gpx_data = api.download_activity(activity_id, dl_fmt=api.ActivityDownloadFormat.ORIGINAL)
+            filename = os.path.join(args.storage, f"{str(activity_id)}.fit")
             with open(filename, "wb") as fp:
                 fp.write(gpx_data)
             cache.set(str(activity_id),

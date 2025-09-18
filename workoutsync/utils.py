@@ -7,6 +7,7 @@ class Cache:
 
     def __init__(self, redis_connect: redis.Redis):
         self.redis = redis_connect
+        self.timeout = 60*60*24*30  # 30 days
         pass
 
     def keys(self):
@@ -20,4 +21,4 @@ class Cache:
         return json.loads(data) if data is not None else None
 
     def set(self, key, value):
-        self.redis.set(f'{self.REDIS_KEY_PREFIX}{key}', json.dumps(value))
+        self.redis.set(f'{self.REDIS_KEY_PREFIX}{key}', json.dumps(value), ex=self.timeout)
