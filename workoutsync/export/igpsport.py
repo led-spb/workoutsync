@@ -2,7 +2,7 @@ import logging
 import os.path
 import os
 
-from igpsport import IgpSportApi
+from ..services.igpsport import IgpSportApi
 
 
 def main():
